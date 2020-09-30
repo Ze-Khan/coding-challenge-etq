@@ -1,0 +1,27 @@
+<div>
+  <h2>User Details</h2>
+  <button style="width: 100px" (click)="addUser()">Add User</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.username }}</td>
+        <td>
+          <button
+            (click)="promptConfirmationDelete(user)"
+            style="margin-left: 20px"
+          >
+            Delete
+          </button>
+          <button (click)="editUser(user.id)" style="margin-left: 20px">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

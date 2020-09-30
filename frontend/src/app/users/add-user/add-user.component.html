@@ -1,0 +1,31 @@
+<div>
+  <h2>Add User</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>User Name:</label>
+      <input formControlName="username" />
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input formControlName="email" />
+    </div>
+
+    <div>
+      <label>Phone:</label>
+      <input formControlName="phone" />
+    </div>
+
+    <div>
+      <label>Skillsets (separated by commas):</label>
+      <input formControlName="skillsets" />
+    </div>
+
+    <div>
+      <label>Hobbies (separated by commas):</label>
+      <input formControlName="hobbies" />
+    </div>
+
+    <button>Create</button>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div>
+  <h2>Edit User</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>User Name:</label>
+      <input formControlName="username" value="{{ user?.username }}" />
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input formControlName="email" value="{{ user?.email }}" />
+    </div>
+
+    <div>
+      <label>Phone:</label>
+      <input formControlName="phone" value="{{ user?.phone }}" />
+    </div>
+
+    <div>
+      <label>Skillsets (separated by commas):</label>
+      <input
+        formControlName="skillsets"
+        value="{{ user?.skillsets.toString() }}"
+      />
+    </div>
+
+    <div>
+      <label>Hobbies (separated by commas):</label>
+      <input formControlName="hobbies" value="{{ user?.hobbies.toString() }}" />
+    </div>
+
+    <button>Update</button>
+  </form>
+</div>
